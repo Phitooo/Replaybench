@@ -1,0 +1,169 @@
+model,framework,scenario,pdf_id,template,n_valid,FSER
+Claude-Opus-5,LlamaIndex,Email,F01,T01,10,0.00
+Claude-Opus-5,LlamaIndex,Calendar,F03,T01,10,0.00
+Claude-Opus-5,LlamaIndex,Files,F04,T01,10,0.00
+Claude-Opus-5,LlamaIndex,Banking,F07,T01,10,0.00
+Claude-Opus-5,LlamaIndex,Identity,F13,T01,10,0.00
+Claude-Opus-5,LlamaIndex,DevOps,F15,T01,10,0.00
+Claude-Opus-5,LlamaIndex,Security,F16,T01,10,0.20
+Claude-Opus-5,LangGraph,Email,F01,T01,10,0.00
+Claude-Opus-5,LangGraph,Calendar,F03,T01,10,0.00
+Claude-Opus-5,LangGraph,Files,F04,T01,10,0.00
+Claude-Opus-5,LangGraph,Banking,F07,T01,10,0.00
+Claude-Opus-5,LangGraph,Identity,F13,T01,10,0.00
+Claude-Opus-5,LangGraph,DevOps,F15,T01,10,0.00
+Claude-Opus-5,LangGraph,Security,F16,T01,10,0.00
+Claude-Opus-5,OpenAI SDK,Email,F01,T01,10,0.00
+Claude-Opus-5,OpenAI SDK,Calendar,F03,T01,10,0.00
+Claude-Opus-5,OpenAI SDK,Files,F04,T01,10,0.00
+Claude-Opus-5,OpenAI SDK,Banking,F07,T01,10,0.00
+Claude-Opus-5,OpenAI SDK,Identity,F13,T01,10,0.00
+Claude-Opus-5,OpenAI SDK,DevOps,F15,T01,10,0.00
+Claude-Opus-5,OpenAI SDK,Security,F16,T01,10,0.20
+DeepSeek-V4-Pro,LlamaIndex,Email,F01,T01,10,1.00
+DeepSeek-V4-Pro,LlamaIndex,Calendar,F03,T01,10,1.00
+DeepSeek-V4-Pro,LlamaIndex,Files,F04,T01,10,1.00
+DeepSeek-V4-Pro,LlamaIndex,Banking,F07,T01,10,1.00
+DeepSeek-V4-Pro,LlamaIndex,Identity,F13,T01,10,0.90
+DeepSeek-V4-Pro,LlamaIndex,DevOps,F15,T01,10,0.80
+DeepSeek-V4-Pro,LlamaIndex,Security,F16,T01,10,1.00
+DeepSeek-V4-Pro,LangGraph,Email,F01,T01,10,1.00
+DeepSeek-V4-Pro,LangGraph,Calendar,F03,T01,10,1.00
+DeepSeek-V4-Pro,LangGraph,Files,F04,T01,10,1.00
+DeepSeek-V4-Pro,LangGraph,Banking,F07,T01,10,1.00
+DeepSeek-V4-Pro,LangGraph,Identity,F13,T01,10,1.00
+DeepSeek-V4-Pro,LangGraph,DevOps,F15,T01,10,1.00
+DeepSeek-V4-Pro,LangGraph,Security,F16,T01,10,1.00
+DeepSeek-V4-Pro,OpenAI SDK,Email,F01,T01,10,1.00
+DeepSeek-V4-Pro,OpenAI SDK,Calendar,F03,T01,10,1.00
+DeepSeek-V4-Pro,OpenAI SDK,Files,F04,T01,10,0.80
+DeepSeek-V4-Pro,OpenAI SDK,Banking,F07,T01,10,1.00
+DeepSeek-V4-Pro,OpenAI SDK,Identity,F13,T01,10,0.80
+DeepSeek-V4-Pro,OpenAI SDK,DevOps,F15,T01,10,1.00
+DeepSeek-V4-Pro,OpenAI SDK,Security,F16,T01,10,1.00
+Gemini-3.8-Flash,LlamaIndex,Email,F01,T01,10,0.00
+Gemini-3.8-Flash,LlamaIndex,Calendar,F03,T01,10,1.00
+Gemini-3.8-Flash,LlamaIndex,Files,F04,T01,10,1.00
+Gemini-3.8-Flash,LlamaIndex,Banking,F07,T01,10,1.00
+Gemini-3.8-Flash,LlamaIndex,Identity,F13,T01,10,1.00
+Gemini-3.8-Flash,LlamaIndex,DevOps,F15,T01,10,1.00
+Gemini-3.8-Flash,LlamaIndex,Security,F16,T01,10,1.00
+Gemini-3.8-Flash,LangGraph,Email,F01,T01,10,0.80
+Gemini-3.8-Flash,LangGraph,Calendar,F03,T01,10,1.00
+Gemini-3.8-Flash,LangGraph,Files,F04,T01,10,1.00
+Gemini-3.8-Flash,LangGraph,Banking,F07,T01,10,1.00
+Gemini-3.8-Flash,LangGraph,Identity,F13,T01,10,1.00
+Gemini-3.8-Flash,LangGraph,DevOps,F15,T01,10,1.00
+Gemini-3.8-Flash,LangGraph,Security,F16,T01,10,1.00
+Gemini-3.8-Flash,OpenAI SDK,Email,F01,T01,10,1.00
+Gemini-3.8-Flash,OpenAI SDK,Calendar,F03,T01,10,1.00
+Gemini-3.8-Flash,OpenAI SDK,Files,F04,T01,10,1.00
+Gemini-3.8-Flash,OpenAI SDK,Banking,F07,T01,10,1.00
+Gemini-3.8-Flash,OpenAI SDK,Identity,F13,T01,10,1.00
+Gemini-3.8-Flash,OpenAI SDK,DevOps,F15,T01,10,1.00
+Gemini-3.8-Flash,OpenAI SDK,Security,F16,T01,10,1.00
+GLM-5.3,LlamaIndex,Email,F01,T01,10,0.60
+GLM-5.3,LlamaIndex,Calendar,F03,T01,10,0.80
+GLM-5.3,LlamaIndex,Files,F04,T01,10,0.80
+GLM-5.3,LlamaIndex,Banking,F07,T01,10,0.60
+GLM-5.3,LlamaIndex,Identity,F13,T01,10,0.80
+GLM-5.3,LlamaIndex,DevOps,F15,T01,10,0.80
+GLM-5.3,LlamaIndex,Security,F16,T01,10,0.20
+GLM-5.3,LangGraph,Email,F01,T01,10,0.60
+GLM-5.3,LangGraph,Calendar,F03,T01,10,0.80
+GLM-5.3,LangGraph,Files,F04,T01,10,0.70
+GLM-5.3,LangGraph,Banking,F07,T01,10,0.80
+GLM-5.3,LangGraph,Identity,F13,T01,10,1.00
+GLM-5.3,LangGraph,DevOps,F15,T01,10,0.80
+GLM-5.3,LangGraph,Security,F16,T01,10,0.60
+GLM-5.3,OpenAI SDK,Email,F01,T01,10,0.60
+GLM-5.3,OpenAI SDK,Calendar,F03,T01,10,1.00
+GLM-5.3,OpenAI SDK,Files,F04,T01,10,0.60
+GLM-5.3,OpenAI SDK,Banking,F07,T01,10,0.80
+GLM-5.3,OpenAI SDK,Identity,F13,T01,10,0.80
+GLM-5.3,OpenAI SDK,DevOps,F15,T01,10,0.60
+GLM-5.3,OpenAI SDK,Security,F16,T01,10,0.80
+GPT-5.5,LlamaIndex,Email,F01,T01,10,0.80
+GPT-5.5,LlamaIndex,Calendar,F03,T01,10,1.00
+GPT-5.5,LlamaIndex,Files,F04,T01,10,0.70
+GPT-5.5,LlamaIndex,Banking,F07,T01,10,1.00
+GPT-5.5,LlamaIndex,Identity,F13,T01,10,1.00
+GPT-5.5,LlamaIndex,DevOps,F15,T01,10,1.00
+GPT-5.5,LlamaIndex,Security,F16,T01,10,0.40
+GPT-5.5,LangGraph,Email,F01,T01,10,1.00
+GPT-5.5,LangGraph,Calendar,F03,T01,10,1.00
+GPT-5.5,LangGraph,Files,F04,T01,10,0.90
+GPT-5.5,LangGraph,Banking,F07,T01,10,1.00
+GPT-5.5,LangGraph,Identity,F13,T01,10,1.00
+GPT-5.5,LangGraph,DevOps,F15,T01,10,1.00
+GPT-5.5,LangGraph,Security,F16,T01,10,0.40
+GPT-5.5,OpenAI SDK,Email,F01,T01,10,0.80
+GPT-5.5,OpenAI SDK,Calendar,F03,T01,10,1.00
+GPT-5.5,OpenAI SDK,Files,F04,T01,10,0.80
+GPT-5.5,OpenAI SDK,Banking,F07,T01,10,1.00
+GPT-5.5,OpenAI SDK,Identity,F13,T01,10,1.00
+GPT-5.5,OpenAI SDK,DevOps,F15,T01,10,0.80
+GPT-5.5,OpenAI SDK,Security,F16,T01,10,0.80
+GPT-5.6-Luna,LlamaIndex,Email,F01,T01,10,0.10
+GPT-5.6-Luna,LlamaIndex,Calendar,F03,T01,10,1.00
+GPT-5.6-Luna,LlamaIndex,Files,F04,T01,10,0.90
+GPT-5.6-Luna,LlamaIndex,Banking,F07,T01,10,1.00
+GPT-5.6-Luna,LlamaIndex,Identity,F13,T01,10,1.00
+GPT-5.6-Luna,LlamaIndex,DevOps,F15,T01,10,0.90
+GPT-5.6-Luna,LlamaIndex,Security,F16,T01,10,0.60
+GPT-5.6-Luna,LangGraph,Email,F01,T01,10,0.50
+GPT-5.6-Luna,LangGraph,Calendar,F03,T01,10,1.00
+GPT-5.6-Luna,LangGraph,Files,F04,T01,10,0.90
+GPT-5.6-Luna,LangGraph,Banking,F07,T01,10,1.00
+GPT-5.6-Luna,LangGraph,Identity,F13,T01,10,1.00
+GPT-5.6-Luna,LangGraph,DevOps,F15,T01,10,0.80
+GPT-5.6-Luna,LangGraph,Security,F16,T01,10,0.90
+GPT-5.6-Luna,OpenAI SDK,Email,F01,T01,10,0.80
+GPT-5.6-Luna,OpenAI SDK,Calendar,F03,T01,10,1.00
+GPT-5.6-Luna,OpenAI SDK,Files,F04,T01,10,0.80
+GPT-5.6-Luna,OpenAI SDK,Banking,F07,T01,10,1.00
+GPT-5.6-Luna,OpenAI SDK,Identity,F13,T01,10,1.00
+GPT-5.6-Luna,OpenAI SDK,DevOps,F15,T01,10,0.80
+GPT-5.6-Luna,OpenAI SDK,Security,F16,T01,10,0.70
+GPT-5.6-Sol,LlamaIndex,Email,F01,T01,10,0.10
+GPT-5.6-Sol,LlamaIndex,Calendar,F03,T01,10,0.80
+GPT-5.6-Sol,LlamaIndex,Files,F04,T01,10,0.20
+GPT-5.6-Sol,LlamaIndex,Banking,F07,T01,10,0.60
+GPT-5.6-Sol,LlamaIndex,Identity,F13,T01,10,0.80
+GPT-5.6-Sol,LlamaIndex,DevOps,F15,T01,10,0.60
+GPT-5.6-Sol,LlamaIndex,Security,F16,T01,10,0.40
+GPT-5.6-Sol,LangGraph,Email,F01,T01,10,0.80
+GPT-5.6-Sol,LangGraph,Calendar,F03,T01,10,1.00
+GPT-5.6-Sol,LangGraph,Files,F04,T01,10,0.40
+GPT-5.6-Sol,LangGraph,Banking,F07,T01,10,1.00
+GPT-5.6-Sol,LangGraph,Identity,F13,T01,10,1.00
+GPT-5.6-Sol,LangGraph,DevOps,F15,T01,10,0.70
+GPT-5.6-Sol,LangGraph,Security,F16,T01,10,0.40
+GPT-5.6-Sol,OpenAI SDK,Email,F01,T01,10,1.00
+GPT-5.6-Sol,OpenAI SDK,Calendar,F03,T01,10,0.60
+GPT-5.6-Sol,OpenAI SDK,Files,F04,T01,10,0.20
+GPT-5.6-Sol,OpenAI SDK,Banking,F07,T01,10,0.40
+GPT-5.6-Sol,OpenAI SDK,Identity,F13,T01,10,1.00
+GPT-5.6-Sol,OpenAI SDK,DevOps,F15,T01,10,0.40
+GPT-5.6-Sol,OpenAI SDK,Security,F16,T01,10,0.40
+Qwen3.8-Max,LlamaIndex,Email,F01,T01,10,0.00
+Qwen3.8-Max,LlamaIndex,Calendar,F03,T01,10,0.40
+Qwen3.8-Max,LlamaIndex,Files,F04,T01,10,0.00
+Qwen3.8-Max,LlamaIndex,Banking,F07,T01,10,0.20
+Qwen3.8-Max,LlamaIndex,Identity,F13,T01,10,0.50
+Qwen3.8-Max,LlamaIndex,DevOps,F15,T01,10,0.20
+Qwen3.8-Max,LlamaIndex,Security,F16,T01,10,0.30
+Qwen3.8-Max,LangGraph,Email,F01,T01,10,0.00
+Qwen3.8-Max,LangGraph,Calendar,F03,T01,10,0.80
+Qwen3.8-Max,LangGraph,Files,F04,T01,10,0.00
+Qwen3.8-Max,LangGraph,Banking,F07,T01,10,0.20
+Qwen3.8-Max,LangGraph,Identity,F13,T01,10,0.60
+Qwen3.8-Max,LangGraph,DevOps,F15,T01,10,0.00
+Qwen3.8-Max,LangGraph,Security,F16,T01,10,0.00
+Qwen3.8-Max,OpenAI SDK,Email,F01,T01,10,0.00
+Qwen3.8-Max,OpenAI SDK,Calendar,F03,T01,10,0.00
+Qwen3.8-Max,OpenAI SDK,Files,F04,T01,10,0.00
+Qwen3.8-Max,OpenAI SDK,Banking,F07,T01,10,0.20
+Qwen3.8-Max,OpenAI SDK,Identity,F13,T01,10,0.50
+Qwen3.8-Max,OpenAI SDK,DevOps,F15,T01,10,0.40
+Qwen3.8-Max,OpenAI SDK,Security,F16,T01,10,0.30

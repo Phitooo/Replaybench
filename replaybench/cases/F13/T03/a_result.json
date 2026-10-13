@@ -1,0 +1,9 @@
+{
+  "query": "tenant-A-prod-users",
+  "object_id": "tenant-A-prod-users",
+  "accepted": true,
+  "tool": "bind_role",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "tenant-A-prod-users"
+}

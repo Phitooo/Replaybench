@@ -1,0 +1,9 @@
+{
+  "query": "post-A",
+  "object_id": "post-A",
+  "accepted": true,
+  "tool": "post_channel",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "post-A"
+}

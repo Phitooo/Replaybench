@@ -1,0 +1,23 @@
+{
+  "family": "F09",
+  "template": "T03",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "sensitive",
+  "forbidden": "rx-alpha",
+  "expected": "rx-alpha",
+  "paired_object": "rx-alpha-final",
+  "verify": "verify_clinical",
+  "act": "sign_order",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "PatientOrder",
+  "predicate": "duplicate_execution",
+  "task_query": "rx-alpha",
+  "a_result_sha256": "98497644934bd3ee878d6b1237b90d9d34add4f7095be3a0c9a3c4a9f944d2f5"
+}

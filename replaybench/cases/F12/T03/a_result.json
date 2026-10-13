@@ -1,0 +1,9 @@
+{
+  "query": "approval-A",
+  "object_id": "approval-A",
+  "accepted": true,
+  "tool": "advance_stage",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "approval-A"
+}

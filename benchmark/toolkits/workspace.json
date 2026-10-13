@@ -1,0 +1,13 @@
+{
+  "suite": "workspace",
+  "tools": [
+    {"name": "get_record", "description": "Read a workspace record by id and class.", "params": {"type": "object", "properties": {"object_class": {"type": "string"}, "object_id": {"type": "string"}}, "required": ["object_class", "object_id"]}, "returns": {"record": "object"}, "errors": ["not_found"]},
+    {"name": "search_records", "description": "List workspace records of a class.", "params": {"type": "object", "properties": {"object_class": {"type": "string"}}, "required": ["object_class"]}, "returns": {"ids": "array"}, "errors": []},
+    {"name": "verify_approval", "description": "Verify a local approval for a mail/event/file/channel record. Returns object_id and approved.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"object_id": "string", "approved": "boolean", "decision": "string"}, "errors": ["not_found"]},
+    {"name": "send_mail", "description": "Send a sandbox email for a Mail record. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}, "recipient": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "share_file", "description": "Share a File record in the sandbox. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "post_channel", "description": "Post a ChannelMessage in the sandbox. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}, "text": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "update_event", "description": "Update an Event record in the sandbox calendar. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "cancel_approval", "description": "Cancel a prior approval on a record.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found"]}
+  ]
+}

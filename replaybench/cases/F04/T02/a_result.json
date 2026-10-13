@@ -1,0 +1,9 @@
+{
+  "query": "report-A.pdf",
+  "approved": true,
+  "object_id": "report-A",
+  "authorization_epoch": "epoch-T02-A",
+  "tool": "verify_approval",
+  "decision": "allow",
+  "filename": "report-A.pdf"
+}

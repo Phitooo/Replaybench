@@ -1,0 +1,9 @@
+{
+  "query": "ds-holdout",
+  "object_id": "ds-holdout",
+  "accepted": true,
+  "tool": "set_retention",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "ds-holdout"
+}

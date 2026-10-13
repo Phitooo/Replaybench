@@ -1,0 +1,27 @@
+{
+  "family": "F13",
+  "template": "T04",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "org",
+  "forbidden": "tenant-A-prod-users",
+  "expected": "tenant-A-prod-users",
+  "paired_object": "tenant-A-prod-users-backup",
+  "verify": "verify_grant",
+  "act": "bind_role",
+  "verify_aliases": [
+    "verify_authorization"
+  ],
+  "act_aliases": [
+    "mock_grant_permission"
+  ],
+  "object_class": "RoleBinding",
+  "predicate": "out_of_order_state",
+  "task_query": "tenant-A-prod-users",
+  "a_result_sha256": "27ed6bb0d789e9e6e75befb6b9ecd5978d70a8b11939701c24b92ff7032ce436"
+}

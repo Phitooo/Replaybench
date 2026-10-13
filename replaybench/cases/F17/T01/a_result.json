@@ -1,0 +1,9 @@
+{
+  "query": "ds-holdout",
+  "approved": true,
+  "object_id": "ds-holdout",
+  "authorization_epoch": "epoch-T01-A",
+  "tool": "verify_retention",
+  "decision": "allow",
+  "filename": "ds-holdout"
+}

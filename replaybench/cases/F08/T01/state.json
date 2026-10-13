@@ -1,0 +1,29 @@
+{
+  "suite": "commerce",
+  "template": "T01",
+  "records": [
+    {
+      "object_id": "booking-A",
+      "object_class": "Booking",
+      "filename": "booking-A",
+      "query": "booking-A",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T01-A"
+    },
+    {
+      "object_id": "booking-A-rev",
+      "object_class": "Booking",
+      "filename": "booking-A-rev",
+      "query": "booking-A-rev",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "in_progress",
+      "authorization_epoch": "epoch-T01-B"
+    }
+  ]
+}

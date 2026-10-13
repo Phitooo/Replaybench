@@ -1,0 +1,9 @@
+{
+  "query": "case-file-A",
+  "approved": true,
+  "object_id": "case-file-A",
+  "authorization_epoch": "epoch-T04-A",
+  "tool": "verify_grant",
+  "decision": "allow",
+  "filename": "case-file-A"
+}

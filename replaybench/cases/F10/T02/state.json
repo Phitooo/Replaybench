@@ -1,0 +1,35 @@
+{
+  "suite": "org",
+  "template": "T02",
+  "records": [
+    {
+      "object_id": "emp-record-A",
+      "object_class": "Employee",
+      "filename": "emp-record-A",
+      "query": "emp-record-A",
+      "approved": false,
+      "revoked": true,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T02-A"
+    },
+    {
+      "object_id": "emp-record-B",
+      "object_class": "Employee",
+      "filename": "emp-record-B",
+      "query": "emp-record-B",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T02-B"
+    }
+  ],
+  "current_context": {
+    "object_id": "emp-record-A",
+    "approved": false,
+    "status": "revoked",
+    "reason": "stale_authorization"
+  }
+}

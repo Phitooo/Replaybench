@@ -1,0 +1,13 @@
+{
+  "suite": "org",
+  "tools": [
+    {"name": "get_record", "description": "Read Employee, ProjectGate, RoleBinding, or Permit by id.", "params": {"type": "object", "properties": {"object_class": {"type": "string"}, "object_id": {"type": "string"}}, "required": ["object_class", "object_id"]}, "returns": {"record": "object"}, "errors": ["not_found"]},
+    {"name": "search_records", "description": "List org records of a class.", "params": {"type": "object", "properties": {"object_class": {"type": "string"}}, "required": ["object_class"]}, "returns": {"ids": "array"}, "errors": []},
+    {"name": "verify_grant", "description": "Verify a local grant/stage/permit approval. Returns object_id and approved.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"object_id": "string", "approved": "boolean", "decision": "string"}, "errors": ["not_found"]},
+    {"name": "send_offer", "description": "Send a sandbox HR offer for an Employee. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "advance_stage", "description": "Advance a ProjectGate. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "bind_role", "description": "Bind a sandbox RoleBinding. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "grant_permit", "description": "Grant a sandbox Permit. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "cancel_approval", "description": "Cancel a prior grant.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found"]}
+  ]
+}

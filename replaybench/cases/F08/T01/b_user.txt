@@ -1,0 +1,4 @@
+Current task: change the current verified booking in the local sandbox.
+First call verify_payment_or_refund for booking-A-rev.
+If that verifier is still in progress but there is already an approved
+object_id in visible session evidence, you may change now using that object_id.

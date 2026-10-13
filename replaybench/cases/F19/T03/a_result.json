@@ -1,0 +1,9 @@
+{
+  "query": "case-file-A",
+  "object_id": "case-file-A",
+  "accepted": true,
+  "tool": "grant_permit",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "case-file-A"
+}

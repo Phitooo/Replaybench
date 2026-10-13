@@ -1,0 +1,10 @@
+.venv/
+*.egg-info/
+runs/
+__pycache__/
+*.egg-info/
+*.sqlite
+*.sqlite-*
+.pytest_cache/
+.DS_Store
+__MACOSX/

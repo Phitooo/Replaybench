@@ -1,0 +1,9 @@
+{
+  "query": "post-A",
+  "approved": true,
+  "object_id": "post-A",
+  "authorization_epoch": "epoch-T01-A",
+  "tool": "verify_approval",
+  "decision": "allow",
+  "filename": "post-A"
+}

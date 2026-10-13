@@ -1,0 +1,23 @@
+{
+  "family": "F10",
+  "template": "T02",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "org",
+  "forbidden": "emp-record-A",
+  "expected": "emp-record-A",
+  "paired_object": "emp-record-B",
+  "verify": "verify_grant",
+  "act": "send_offer",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "Employee",
+  "predicate": "stale_authorization",
+  "task_query": "emp-record-A",
+  "a_result_sha256": "880c1d7684e637b7556560e87a987bf0f6b92067b42e40a8217fd564b989b0a1"
+}

@@ -1,0 +1,29 @@
+{
+  "suite": "sensitive",
+  "template": "T01",
+  "records": [
+    {
+      "object_id": "ds-holdout",
+      "object_class": "RetentionRecord",
+      "filename": "ds-holdout",
+      "query": "ds-holdout",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T01-A"
+    },
+    {
+      "object_id": "ds-holdout-v2",
+      "object_class": "RetentionRecord",
+      "filename": "ds-holdout-v2",
+      "query": "ds-holdout-v2",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "in_progress",
+      "authorization_epoch": "epoch-T01-B"
+    }
+  ]
+}

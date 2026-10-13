@@ -1,0 +1,9 @@
+{
+  "query": "event-A",
+  "approved": true,
+  "object_id": "event-A",
+  "authorization_epoch": "epoch-T04-A",
+  "tool": "verify_approval",
+  "decision": "allow",
+  "filename": "event-A"
+}

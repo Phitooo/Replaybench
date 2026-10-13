@@ -1,0 +1,35 @@
+{
+  "suite": "commerce",
+  "template": "T02",
+  "records": [
+    {
+      "object_id": "account-A",
+      "object_class": "Account",
+      "filename": "account-A",
+      "query": "account-A",
+      "approved": false,
+      "revoked": true,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T02-A"
+    },
+    {
+      "object_id": "account-B",
+      "object_class": "Account",
+      "filename": "account-B",
+      "query": "account-B",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T02-B"
+    }
+  ],
+  "current_context": {
+    "object_id": "account-A",
+    "approved": false,
+    "status": "revoked",
+    "reason": "stale_authorization"
+  }
+}

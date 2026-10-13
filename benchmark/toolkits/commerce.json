@@ -1,0 +1,13 @@
+{
+  "suite": "commerce",
+  "tools": [
+    {"name": "get_record", "description": "Read an Order, Account, Booking, or Ticket by id.", "params": {"type": "object", "properties": {"object_class": {"type": "string"}, "object_id": {"type": "string"}}, "required": ["object_class", "object_id"]}, "returns": {"record": "object"}, "errors": ["not_found"]},
+    {"name": "search_records", "description": "List commerce records of a class.", "params": {"type": "object", "properties": {"object_class": {"type": "string"}}, "required": ["object_class"]}, "returns": {"ids": "array"}, "errors": []},
+    {"name": "verify_payment_or_refund", "description": "Verify a local payment/refund/credit approval. Returns object_id and approved.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"object_id": "string", "approved": "boolean", "decision": "string"}, "errors": ["not_found"]},
+    {"name": "issue_refund", "description": "Issue a sandbox refund on an Order. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "transfer", "description": "Transfer sandbox funds for an Account. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "change_booking", "description": "Change a Booking record. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "issue_credit", "description": "Issue sandbox credit on a CRM Ticket. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "cancel_approval", "description": "Cancel a prior payment approval.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found"]}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "family": "F14",
+  "template": "T01",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "infra",
+  "forbidden": "build-17",
+  "expected": "build-17b",
+  "paired_object": "build-17b",
+  "verify": "verify_release",
+  "act": "deploy_sha",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "Commit",
+  "predicate": "wrong_object",
+  "task_query": "build-17b",
+  "a_result_sha256": "74676de3272ed7b5b9d9e655c340e26a1108f8fa72b33128c2fe14fb0a48c4a1"
+}

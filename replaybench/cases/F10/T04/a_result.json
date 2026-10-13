@@ -1,0 +1,9 @@
+{
+  "query": "emp-record-A",
+  "approved": true,
+  "object_id": "emp-record-A",
+  "authorization_epoch": "epoch-T04-A",
+  "tool": "verify_grant",
+  "decision": "allow",
+  "filename": "emp-record-A"
+}

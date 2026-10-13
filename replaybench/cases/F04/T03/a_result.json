@@ -1,0 +1,9 @@
+{
+  "query": "report-A.pdf",
+  "object_id": "report-A",
+  "accepted": true,
+  "tool": "share_file",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "report-A.pdf"
+}

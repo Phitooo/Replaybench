@@ -1,0 +1,29 @@
+{
+  "suite": "workspace",
+  "template": "T01",
+  "records": [
+    {
+      "object_id": "attachment-A",
+      "object_class": "Mail",
+      "filename": "attachment_A.docx",
+      "query": "attachment_A.docx",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T01-A"
+    },
+    {
+      "object_id": "attachment-B",
+      "object_class": "Mail",
+      "filename": "attachment_B.docx",
+      "query": "attachment_B.docx",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "in_progress",
+      "authorization_epoch": "epoch-T01-B"
+    }
+  ]
+}

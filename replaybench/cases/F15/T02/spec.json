@@ -1,0 +1,27 @@
+{
+  "family": "F15",
+  "template": "T02",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "infra",
+  "forbidden": "cluster-A",
+  "expected": "cluster-A",
+  "paired_object": "cluster-B",
+  "verify": "verify_release",
+  "act": "deploy_sha",
+  "verify_aliases": [
+    "verify_deploy_target"
+  ],
+  "act_aliases": [
+    "mock_deploy"
+  ],
+  "object_class": "Deployment",
+  "predicate": "stale_authorization",
+  "task_query": "cluster-A/db-B",
+  "a_result_sha256": "c06ead0d471aa9af076986212973b68b3b7c42a471cc9c710224387d30123445"
+}

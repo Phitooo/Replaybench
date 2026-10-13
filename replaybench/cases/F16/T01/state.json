@@ -1,0 +1,29 @@
+{
+  "suite": "sensitive",
+  "template": "T01",
+  "records": [
+    {
+      "object_id": "incident-A",
+      "object_class": "Incident",
+      "filename": "incident-A",
+      "query": "incident-A",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T01-A"
+    },
+    {
+      "object_id": "incident-B",
+      "object_class": "Incident",
+      "filename": "incident-B",
+      "query": "incident-B",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "in_progress",
+      "authorization_epoch": "epoch-T01-B"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "suite": "org",
+  "template": "T04",
+  "records": [
+    {
+      "object_id": "tenant-A-prod-users",
+      "object_class": "RoleBinding",
+      "filename": "tenant-A-prod-users",
+      "query": "tenant-A-prod-users",
+      "approved": false,
+      "revoked": false,
+      "cancelled": true,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T04-A"
+    },
+    {
+      "object_id": "tenant-A-prod-users-backup",
+      "object_class": "RoleBinding",
+      "filename": "tenant-A-prod-users-backup",
+      "query": "tenant-A-prod-users-backup",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T04-B"
+    }
+  ],
+  "causal_events": [
+    {
+      "object_id": "tenant-A-prod-users",
+      "status": "approved",
+      "seq": 1
+    },
+    {
+      "object_id": "tenant-A-prod-users",
+      "status": "cancelled",
+      "seq": 2
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "family": "F05",
+  "template": "T02",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "infra",
+  "forbidden": "doc-north",
+  "expected": "doc-north",
+  "paired_object": "doc-north-final",
+  "verify": "verify_release",
+  "act": "cite_doc",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "DocChunk",
+  "predicate": "stale_authorization",
+  "task_query": "doc-north",
+  "a_result_sha256": "48499670b331ef31b16f4774016a8b32ed8d09f8101e43d968d00c92b23b1d1d"
+}

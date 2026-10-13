@@ -1,0 +1,35 @@
+{
+  "suite": "infra",
+  "template": "T02",
+  "records": [
+    {
+      "object_id": "doc-north",
+      "object_class": "DocChunk",
+      "filename": "doc-north",
+      "query": "doc-north",
+      "approved": false,
+      "revoked": true,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T02-A"
+    },
+    {
+      "object_id": "doc-north-final",
+      "object_class": "DocChunk",
+      "filename": "doc-north-final",
+      "query": "doc-north-final",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T02-B"
+    }
+  ],
+  "current_context": {
+    "object_id": "doc-north",
+    "approved": false,
+    "status": "revoked",
+    "reason": "stale_authorization"
+  }
+}

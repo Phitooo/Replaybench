@@ -1,0 +1,29 @@
+{
+  "suite": "infra",
+  "template": "T01",
+  "records": [
+    {
+      "object_id": "device-kitchen",
+      "object_class": "Device",
+      "filename": "device-kitchen",
+      "query": "device-kitchen",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T01-A"
+    },
+    {
+      "object_id": "device-kitchen-2",
+      "object_class": "Device",
+      "filename": "device-kitchen-2",
+      "query": "device-kitchen-2",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "in_progress",
+      "authorization_epoch": "epoch-T01-B"
+    }
+  ]
+}

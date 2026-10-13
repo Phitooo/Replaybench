@@ -1,0 +1,41 @@
+{
+  "suite": "org",
+  "template": "T04",
+  "records": [
+    {
+      "object_id": "approval-A",
+      "object_class": "ProjectGate",
+      "filename": "approval-A",
+      "query": "approval-A",
+      "approved": false,
+      "revoked": false,
+      "cancelled": true,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T04-A"
+    },
+    {
+      "object_id": "approval-B",
+      "object_class": "ProjectGate",
+      "filename": "approval-B",
+      "query": "approval-B",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T04-B"
+    }
+  ],
+  "causal_events": [
+    {
+      "object_id": "approval-A",
+      "status": "approved",
+      "seq": 1
+    },
+    {
+      "object_id": "approval-A",
+      "status": "cancelled",
+      "seq": 2
+    }
+  ]
+}

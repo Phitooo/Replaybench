@@ -1,0 +1,9 @@
+{
+  "query": "device-kitchen",
+  "object_id": "device-kitchen",
+  "accepted": true,
+  "tool": "set_lock",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "device-kitchen"
+}

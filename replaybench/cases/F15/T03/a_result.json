@@ -1,0 +1,9 @@
+{
+  "query": "cluster-A/db-B",
+  "object_id": "cluster-A",
+  "accepted": true,
+  "tool": "deploy_sha",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "cluster-A/db-B"
+}

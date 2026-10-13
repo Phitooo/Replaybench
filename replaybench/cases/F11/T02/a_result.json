@@ -1,0 +1,9 @@
+{
+  "query": "ticket-441",
+  "approved": true,
+  "object_id": "ticket-441",
+  "authorization_epoch": "epoch-T02-A",
+  "tool": "verify_payment_or_refund",
+  "decision": "allow",
+  "filename": "ticket-441"
+}

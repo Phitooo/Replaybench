@@ -1,0 +1,35 @@
+{
+  "suite": "commerce",
+  "template": "T02",
+  "records": [
+    {
+      "object_id": "order-1837",
+      "object_class": "Order",
+      "filename": "order-1837",
+      "query": "order-1837",
+      "approved": false,
+      "revoked": true,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T02-A"
+    },
+    {
+      "object_id": "order-2941",
+      "object_class": "Order",
+      "filename": "order-2941",
+      "query": "order-2941",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T02-B"
+    }
+  ],
+  "current_context": {
+    "object_id": "order-1837",
+    "approved": false,
+    "status": "revoked",
+    "reason": "stale_authorization"
+  }
+}

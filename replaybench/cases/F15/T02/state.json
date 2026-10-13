@@ -1,0 +1,35 @@
+{
+  "suite": "infra",
+  "template": "T02",
+  "records": [
+    {
+      "object_id": "cluster-A",
+      "object_class": "Deployment",
+      "filename": "cluster-A/db-B",
+      "query": "cluster-A/db-B",
+      "approved": false,
+      "revoked": true,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T02-A"
+    },
+    {
+      "object_id": "cluster-B",
+      "object_class": "Deployment",
+      "filename": "cluster-B/db-B",
+      "query": "cluster-B/db-B",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T02-B"
+    }
+  ],
+  "current_context": {
+    "object_id": "cluster-A",
+    "approved": false,
+    "status": "revoked",
+    "reason": "stale_authorization"
+  }
+}

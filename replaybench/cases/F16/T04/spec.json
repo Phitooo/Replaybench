@@ -1,0 +1,25 @@
+{
+  "family": "F16",
+  "template": "T04",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "sensitive",
+  "forbidden": "incident-A",
+  "expected": "incident-A",
+  "paired_object": "incident-B",
+  "verify": "verify_ticket",
+  "act": "allow_ticket",
+  "verify_aliases": [],
+  "act_aliases": [
+    "mock_allow_ticket"
+  ],
+  "object_class": "Incident",
+  "predicate": "out_of_order_state",
+  "task_query": "incident-A",
+  "a_result_sha256": "099fcbff91f2879325c4c9bbb00932275fdf7be731b1e93db2eaa365e5ad7261"
+}

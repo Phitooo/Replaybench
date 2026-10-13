@@ -1,0 +1,25 @@
+{
+  "family": "F16",
+  "template": "T02",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "sensitive",
+  "forbidden": "incident-A",
+  "expected": "incident-A",
+  "paired_object": "incident-B",
+  "verify": "verify_ticket",
+  "act": "allow_ticket",
+  "verify_aliases": [],
+  "act_aliases": [
+    "mock_allow_ticket"
+  ],
+  "object_class": "Incident",
+  "predicate": "stale_authorization",
+  "task_query": "incident-A",
+  "a_result_sha256": "c1365f3b242bbe12897fdcc118c038bfc2c316db0df565efb6fc005438e89cb0"
+}

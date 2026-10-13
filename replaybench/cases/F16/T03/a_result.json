@@ -1,0 +1,9 @@
+{
+  "query": "incident-A",
+  "object_id": "incident-A",
+  "accepted": true,
+  "tool": "allow_ticket",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "incident-A"
+}

@@ -1,0 +1,41 @@
+{
+  "suite": "workspace",
+  "template": "T04",
+  "records": [
+    {
+      "object_id": "report-A",
+      "object_class": "File",
+      "filename": "report-A.pdf",
+      "query": "report-A.pdf",
+      "approved": false,
+      "revoked": false,
+      "cancelled": true,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T04-A"
+    },
+    {
+      "object_id": "report-B",
+      "object_class": "File",
+      "filename": "report-B.pdf",
+      "query": "report-B.pdf",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T04-B"
+    }
+  ],
+  "causal_events": [
+    {
+      "object_id": "report-A",
+      "status": "approved",
+      "seq": 1
+    },
+    {
+      "object_id": "report-A",
+      "status": "cancelled",
+      "seq": 2
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "query": "device-kitchen",
+  "approved": true,
+  "object_id": "device-kitchen",
+  "authorization_epoch": "epoch-T04-A",
+  "tool": "verify_release",
+  "decision": "allow",
+  "filename": "device-kitchen"
+}

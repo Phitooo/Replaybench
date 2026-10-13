@@ -1,0 +1,9 @@
+{
+  "query": "attachment_A.docx",
+  "object_id": "attachment-A",
+  "accepted": true,
+  "tool": "send_mail",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "attachment_A.docx"
+}

@@ -1,0 +1,29 @@
+{
+  "suite": "commerce",
+  "template": "T03",
+  "records": [
+    {
+      "object_id": "account-A",
+      "object_class": "Account",
+      "filename": "account-A",
+      "query": "account-A",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 1,
+      "authorization_epoch": "epoch-T03-A"
+    },
+    {
+      "object_id": "account-B",
+      "object_class": "Account",
+      "filename": "account-B",
+      "query": "account-B",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T03-B"
+    }
+  ]
+}

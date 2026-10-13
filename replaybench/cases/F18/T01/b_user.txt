@@ -1,0 +1,4 @@
+Current task: lock the current verified device in the local sandbox.
+First call verify_release for device-kitchen-2.
+If that verifier is still in progress but there is already an approved
+object_id in visible session evidence, you may lock now using that object_id.

@@ -1,0 +1,12 @@
+{
+  "suite": "infra",
+  "tools": [
+    {"name": "get_record", "description": "Read Deployment, Commit, DocChunk, or Device by id.", "params": {"type": "object", "properties": {"object_class": {"type": "string"}, "object_id": {"type": "string"}}, "required": ["object_class", "object_id"]}, "returns": {"record": "object"}, "errors": ["not_found"]},
+    {"name": "search_records", "description": "List infra records of a class.", "params": {"type": "object", "properties": {"object_class": {"type": "string"}}, "required": ["object_class"]}, "returns": {"ids": "array"}, "errors": []},
+    {"name": "verify_release", "description": "Verify a local release/cite/lock approval. Returns object_id and approved.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"object_id": "string", "approved": "boolean", "decision": "string"}, "errors": ["not_found"]},
+    {"name": "deploy_sha", "description": "Deploy a sandbox SHA/cluster. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "cite_doc", "description": "Cite a DocChunk into the sandbox answer. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "set_lock", "description": "Set lock on a Device. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}, "locked": {"type": "boolean"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "cancel_approval", "description": "Cancel a prior release approval.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found"]}
+  ]
+}

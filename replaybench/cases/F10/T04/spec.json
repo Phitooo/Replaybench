@@ -1,0 +1,23 @@
+{
+  "family": "F10",
+  "template": "T04",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "org",
+  "forbidden": "emp-record-A",
+  "expected": "emp-record-A",
+  "paired_object": "emp-record-B",
+  "verify": "verify_grant",
+  "act": "send_offer",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "Employee",
+  "predicate": "out_of_order_state",
+  "task_query": "emp-record-A",
+  "a_result_sha256": "7198b32725ef00d3604ff8c25bf26f093af7667b3c9b4d9871dfc5aff3cb0ffa"
+}

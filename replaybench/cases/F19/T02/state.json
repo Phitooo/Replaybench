@@ -1,0 +1,35 @@
+{
+  "suite": "org",
+  "template": "T02",
+  "records": [
+    {
+      "object_id": "case-file-A",
+      "object_class": "Permit",
+      "filename": "case-file-A",
+      "query": "case-file-A",
+      "approved": false,
+      "revoked": true,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T02-A"
+    },
+    {
+      "object_id": "case-file-A-rev",
+      "object_class": "Permit",
+      "filename": "case-file-A-rev",
+      "query": "case-file-A-rev",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T02-B"
+    }
+  ],
+  "current_context": {
+    "object_id": "case-file-A",
+    "approved": false,
+    "status": "revoked",
+    "reason": "stale_authorization"
+  }
+}

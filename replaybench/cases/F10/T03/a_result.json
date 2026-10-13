@@ -1,0 +1,9 @@
+{
+  "query": "emp-record-A",
+  "object_id": "emp-record-A",
+  "accepted": true,
+  "tool": "send_offer",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "emp-record-A"
+}

@@ -1,0 +1,35 @@
+{
+  "suite": "sensitive",
+  "template": "T02",
+  "records": [
+    {
+      "object_id": "rx-alpha",
+      "object_class": "PatientOrder",
+      "filename": "rx-alpha",
+      "query": "rx-alpha",
+      "approved": false,
+      "revoked": true,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T02-A"
+    },
+    {
+      "object_id": "rx-alpha-final",
+      "object_class": "PatientOrder",
+      "filename": "rx-alpha-final",
+      "query": "rx-alpha-final",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T02-B"
+    }
+  ],
+  "current_context": {
+    "object_id": "rx-alpha",
+    "approved": false,
+    "status": "revoked",
+    "reason": "stale_authorization"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "query": "rx-alpha",
+  "approved": true,
+  "object_id": "rx-alpha",
+  "authorization_epoch": "epoch-T02-A",
+  "tool": "verify_clinical",
+  "decision": "allow",
+  "filename": "rx-alpha"
+}

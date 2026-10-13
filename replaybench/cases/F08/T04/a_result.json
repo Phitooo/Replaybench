@@ -1,0 +1,9 @@
+{
+  "query": "booking-A",
+  "approved": true,
+  "object_id": "booking-A",
+  "authorization_epoch": "epoch-T04-A",
+  "tool": "verify_payment_or_refund",
+  "decision": "allow",
+  "filename": "booking-A"
+}

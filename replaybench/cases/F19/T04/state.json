@@ -1,0 +1,41 @@
+{
+  "suite": "org",
+  "template": "T04",
+  "records": [
+    {
+      "object_id": "case-file-A",
+      "object_class": "Permit",
+      "filename": "case-file-A",
+      "query": "case-file-A",
+      "approved": false,
+      "revoked": false,
+      "cancelled": true,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T04-A"
+    },
+    {
+      "object_id": "case-file-A-rev",
+      "object_class": "Permit",
+      "filename": "case-file-A-rev",
+      "query": "case-file-A-rev",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T04-B"
+    }
+  ],
+  "causal_events": [
+    {
+      "object_id": "case-file-A",
+      "status": "approved",
+      "seq": 1
+    },
+    {
+      "object_id": "case-file-A",
+      "status": "cancelled",
+      "seq": 2
+    }
+  ]
+}

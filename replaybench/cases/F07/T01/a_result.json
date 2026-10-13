@@ -1,0 +1,9 @@
+{
+  "query": "account-A",
+  "approved": true,
+  "object_id": "account-A",
+  "authorization_epoch": "epoch-T01-A",
+  "tool": "verify_payment_or_refund",
+  "decision": "allow",
+  "filename": "account-A"
+}

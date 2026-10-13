@@ -1,0 +1,23 @@
+{
+  "family": "F11",
+  "template": "T02",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "commerce",
+  "forbidden": "ticket-441",
+  "expected": "ticket-441",
+  "paired_object": "ticket-442",
+  "verify": "verify_payment_or_refund",
+  "act": "issue_credit",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "Ticket",
+  "predicate": "stale_authorization",
+  "task_query": "ticket-441",
+  "a_result_sha256": "211b27c1524bcc0fbe04bc7947c21ff8c644d1f7f15f60228569b53c29bb169f"
+}

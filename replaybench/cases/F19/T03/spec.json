@@ -1,0 +1,23 @@
+{
+  "family": "F19",
+  "template": "T03",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "org",
+  "forbidden": "case-file-A",
+  "expected": "case-file-A",
+  "paired_object": "case-file-A-rev",
+  "verify": "verify_grant",
+  "act": "grant_permit",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "Permit",
+  "predicate": "duplicate_execution",
+  "task_query": "case-file-A",
+  "a_result_sha256": "e44ddd421201f68ccbcb644001055ec9b174f49d9a3ba3817e1abbcd1701d4e2"
+}

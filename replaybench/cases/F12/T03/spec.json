@@ -1,0 +1,23 @@
+{
+  "family": "F12",
+  "template": "T03",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "org",
+  "forbidden": "approval-A",
+  "expected": "approval-A",
+  "paired_object": "approval-B",
+  "verify": "verify_grant",
+  "act": "advance_stage",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "ProjectGate",
+  "predicate": "duplicate_execution",
+  "task_query": "approval-A",
+  "a_result_sha256": "bcae257f69723c831c4b5a8b1f5186d2738d9b20e8224eefb27393696e54a83b"
+}

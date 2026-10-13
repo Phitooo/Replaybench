@@ -1,0 +1,29 @@
+{
+  "suite": "workspace",
+  "template": "T03",
+  "records": [
+    {
+      "object_id": "report-A",
+      "object_class": "File",
+      "filename": "report-A.pdf",
+      "query": "report-A.pdf",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 1,
+      "authorization_epoch": "epoch-T03-A"
+    },
+    {
+      "object_id": "report-B",
+      "object_class": "File",
+      "filename": "report-B.pdf",
+      "query": "report-B.pdf",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T03-B"
+    }
+  ]
+}

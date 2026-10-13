@@ -1,0 +1,29 @@
+{
+  "suite": "workspace",
+  "template": "T01",
+  "records": [
+    {
+      "object_id": "event-A",
+      "object_class": "Event",
+      "filename": "event-A",
+      "query": "event-A",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T01-A"
+    },
+    {
+      "object_id": "event-B",
+      "object_class": "Event",
+      "filename": "event-B",
+      "query": "event-B",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "in_progress",
+      "authorization_epoch": "epoch-T01-B"
+    }
+  ]
+}

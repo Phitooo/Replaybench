@@ -1,0 +1,9 @@
+{
+  "query": "order-1837",
+  "approved": true,
+  "object_id": "order-1837",
+  "authorization_epoch": "epoch-T04-A",
+  "tool": "verify_payment_or_refund",
+  "decision": "allow",
+  "filename": "order-1837"
+}

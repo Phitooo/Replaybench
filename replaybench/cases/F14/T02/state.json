@@ -1,0 +1,35 @@
+{
+  "suite": "infra",
+  "template": "T02",
+  "records": [
+    {
+      "object_id": "build-17",
+      "object_class": "Commit",
+      "filename": "build-17",
+      "query": "build-17",
+      "approved": false,
+      "revoked": true,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T02-A"
+    },
+    {
+      "object_id": "build-17b",
+      "object_class": "Commit",
+      "filename": "build-17b",
+      "query": "build-17b",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T02-B"
+    }
+  ],
+  "current_context": {
+    "object_id": "build-17",
+    "approved": false,
+    "status": "revoked",
+    "reason": "stale_authorization"
+  }
+}

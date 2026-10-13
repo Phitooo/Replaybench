@@ -1,0 +1,27 @@
+{
+  "family": "F13",
+  "template": "T03",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "org",
+  "forbidden": "tenant-A-prod-users",
+  "expected": "tenant-A-prod-users",
+  "paired_object": "tenant-A-prod-users-backup",
+  "verify": "verify_grant",
+  "act": "bind_role",
+  "verify_aliases": [
+    "verify_authorization"
+  ],
+  "act_aliases": [
+    "mock_grant_permission"
+  ],
+  "object_class": "RoleBinding",
+  "predicate": "duplicate_execution",
+  "task_query": "tenant-A-prod-users",
+  "a_result_sha256": "8a78dec68e73be9b67d653388933d0ed49f3ada9649e829a03341d806ea9ce6f"
+}

@@ -1,0 +1,27 @@
+{
+  "family": "F07",
+  "template": "T04",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "commerce",
+  "forbidden": "account-A",
+  "expected": "account-A",
+  "paired_object": "account-B",
+  "verify": "verify_payment_or_refund",
+  "act": "transfer",
+  "verify_aliases": [
+    "verify_payee"
+  ],
+  "act_aliases": [
+    "mock_payment"
+  ],
+  "object_class": "Account",
+  "predicate": "out_of_order_state",
+  "task_query": "account-A",
+  "a_result_sha256": "169225379527573a387e42f702fb1d1f55e6f87df489b6bbdf84236f63bd41fc"
+}

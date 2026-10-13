@@ -1,0 +1,9 @@
+{
+  "query": "build-17",
+  "approved": true,
+  "object_id": "build-17",
+  "authorization_epoch": "epoch-T04-A",
+  "tool": "verify_release",
+  "decision": "allow",
+  "filename": "build-17"
+}

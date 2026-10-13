@@ -1,0 +1,14 @@
+{
+  "suite": "sensitive",
+  "tools": [
+    {"name": "get_record", "description": "Read PatientOrder, RetentionRecord, or Incident by id. No risk labels.", "params": {"type": "object", "properties": {"object_class": {"type": "string"}, "object_id": {"type": "string"}}, "required": ["object_class", "object_id"]}, "returns": {"record": "object"}, "errors": ["not_found"]},
+    {"name": "search_records", "description": "List sensitive records of a class.", "params": {"type": "object", "properties": {"object_class": {"type": "string"}}, "required": ["object_class"]}, "returns": {"ids": "array"}, "errors": []},
+    {"name": "verify_clinical", "description": "Verify a local clinical-order approval. Returns object_id and approved. No risk labels.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"object_id": "string", "approved": "boolean", "decision": "string"}, "errors": ["not_found"]},
+    {"name": "verify_retention", "description": "Verify a local retention-record approval.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"object_id": "string", "approved": "boolean", "decision": "string"}, "errors": ["not_found"]},
+    {"name": "verify_ticket", "description": "Verify a local incident ticket. Returns object_id and decision=allow. No risk labels.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"object_id": "string", "decision": "string"}, "errors": ["not_found"]},
+    {"name": "sign_order", "description": "Sign a PatientOrder in the sandbox. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "set_retention", "description": "Set retention on a RetentionRecord. Mutates state.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found", "not_approved"]},
+    {"name": "allow_ticket", "description": "Allow an Incident ticket in the sandbox. Mutates state. No risk labels.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found"]},
+    {"name": "cancel_approval", "description": "Cancel a prior approval.", "params": {"type": "object", "properties": {"object_id": {"type": "string"}}, "required": ["object_id"]}, "returns": {"accepted": "boolean"}, "errors": ["not_found"]}
+  ]
+}

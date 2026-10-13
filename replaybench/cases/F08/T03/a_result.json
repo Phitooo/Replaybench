@@ -1,0 +1,9 @@
+{
+  "query": "booking-A",
+  "object_id": "booking-A",
+  "accepted": true,
+  "tool": "change_booking",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "booking-A"
+}

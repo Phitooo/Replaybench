@@ -1,0 +1,23 @@
+{
+  "family": "F18",
+  "template": "T01",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "infra",
+  "forbidden": "device-kitchen",
+  "expected": "device-kitchen-2",
+  "paired_object": "device-kitchen-2",
+  "verify": "verify_release",
+  "act": "set_lock",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "Device",
+  "predicate": "wrong_object",
+  "task_query": "device-kitchen-2",
+  "a_result_sha256": "8e7da0b0e96344583bb382934b64752f432e4a44eb28c384835b6f02ac8f3bce"
+}

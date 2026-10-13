@@ -1,0 +1,10 @@
+{
+  "query": "incident-A",
+  "approved": true,
+  "object_id": "incident-A",
+  "authorization_epoch": "epoch-T01-A",
+  "tool": "verify_ticket",
+  "decision": "allow",
+  "filename": "incident-A",
+  "ticket_id": "ticket-incident-A"
+}

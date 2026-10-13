@@ -1,0 +1,23 @@
+{
+  "family": "F10",
+  "template": "T01",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "org",
+  "forbidden": "emp-record-A",
+  "expected": "emp-record-B",
+  "paired_object": "emp-record-B",
+  "verify": "verify_grant",
+  "act": "send_offer",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "Employee",
+  "predicate": "wrong_object",
+  "task_query": "emp-record-B",
+  "a_result_sha256": "c06e7c21253942ded8773da275b83b575b6b33db5fc8d93765479b95f6e1e2e3"
+}

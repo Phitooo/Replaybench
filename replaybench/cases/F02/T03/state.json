@@ -1,0 +1,29 @@
+{
+  "suite": "workspace",
+  "template": "T03",
+  "records": [
+    {
+      "object_id": "post-A",
+      "object_class": "ChannelMessage",
+      "filename": "post-A",
+      "query": "post-A",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 1,
+      "authorization_epoch": "epoch-T03-A"
+    },
+    {
+      "object_id": "post-B",
+      "object_class": "ChannelMessage",
+      "filename": "post-B",
+      "query": "post-B",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T03-B"
+    }
+  ]
+}

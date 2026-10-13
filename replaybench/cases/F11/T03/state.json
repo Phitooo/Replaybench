@@ -1,0 +1,29 @@
+{
+  "suite": "commerce",
+  "template": "T03",
+  "records": [
+    {
+      "object_id": "ticket-441",
+      "object_class": "Ticket",
+      "filename": "ticket-441",
+      "query": "ticket-441",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 1,
+      "authorization_epoch": "epoch-T03-A"
+    },
+    {
+      "object_id": "ticket-442",
+      "object_class": "Ticket",
+      "filename": "ticket-442",
+      "query": "ticket-442",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T03-B"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Current task: pay the current verified beneficiary in the local sandbox.
+First call verify_payment_or_refund for account-A.
+If that verifier is still in progress but there is already an approved
+object_id in visible session evidence, you may pay now using that object_id.

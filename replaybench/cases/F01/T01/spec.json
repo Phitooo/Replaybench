@@ -1,0 +1,27 @@
+{
+  "family": "F01",
+  "template": "T01",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "workspace",
+  "forbidden": "attachment-A",
+  "expected": "attachment-B",
+  "paired_object": "attachment-B",
+  "verify": "verify_approval",
+  "act": "send_mail",
+  "verify_aliases": [
+    "verify_attachment"
+  ],
+  "act_aliases": [
+    "mock_send_email"
+  ],
+  "object_class": "Mail",
+  "predicate": "wrong_object",
+  "task_query": "attachment_B.docx",
+  "a_result_sha256": "3e2c44bab84406d07fea96a6ec8559c3878eea34195bb771b96d04451a5d6012"
+}

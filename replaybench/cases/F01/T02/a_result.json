@@ -1,0 +1,9 @@
+{
+  "query": "attachment_A.docx",
+  "approved": true,
+  "object_id": "attachment-A",
+  "authorization_epoch": "epoch-T02-A",
+  "tool": "verify_approval",
+  "decision": "allow",
+  "filename": "attachment_A.docx"
+}

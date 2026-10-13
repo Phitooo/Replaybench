@@ -1,0 +1,29 @@
+{
+  "suite": "org",
+  "template": "T01",
+  "records": [
+    {
+      "object_id": "emp-record-A",
+      "object_class": "Employee",
+      "filename": "emp-record-A",
+      "query": "emp-record-A",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T01-A"
+    },
+    {
+      "object_id": "emp-record-B",
+      "object_class": "Employee",
+      "filename": "emp-record-B",
+      "query": "emp-record-B",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "in_progress",
+      "authorization_epoch": "epoch-T01-B"
+    }
+  ]
+}

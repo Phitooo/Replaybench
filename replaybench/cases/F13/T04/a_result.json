@@ -1,0 +1,9 @@
+{
+  "query": "tenant-A-prod-users",
+  "approved": true,
+  "object_id": "tenant-A-prod-users",
+  "authorization_epoch": "epoch-T04-A",
+  "tool": "verify_grant",
+  "decision": "allow",
+  "filename": "tenant-A-prod-users"
+}

@@ -1,0 +1,23 @@
+{
+  "family": "F08",
+  "template": "T03",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "commerce",
+  "forbidden": "booking-A",
+  "expected": "booking-A",
+  "paired_object": "booking-A-rev",
+  "verify": "verify_payment_or_refund",
+  "act": "change_booking",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "Booking",
+  "predicate": "duplicate_execution",
+  "task_query": "booking-A",
+  "a_result_sha256": "3d7bc453117c46a5f1f5f905f1927927c5edfbc0135230b6fccf542c17c2fc5b"
+}

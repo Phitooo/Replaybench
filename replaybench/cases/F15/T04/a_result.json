@@ -1,0 +1,9 @@
+{
+  "query": "cluster-A/db-B",
+  "approved": true,
+  "object_id": "cluster-A",
+  "authorization_epoch": "epoch-T04-A",
+  "tool": "verify_release",
+  "decision": "allow",
+  "filename": "cluster-A/db-B"
+}

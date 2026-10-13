@@ -1,0 +1,41 @@
+{
+  "suite": "commerce",
+  "template": "T04",
+  "records": [
+    {
+      "object_id": "ticket-441",
+      "object_class": "Ticket",
+      "filename": "ticket-441",
+      "query": "ticket-441",
+      "approved": false,
+      "revoked": false,
+      "cancelled": true,
+      "act_count": 0,
+      "authorization_epoch": "epoch-T04-A"
+    },
+    {
+      "object_id": "ticket-442",
+      "object_class": "Ticket",
+      "filename": "ticket-442",
+      "query": "ticket-442",
+      "approved": true,
+      "revoked": false,
+      "cancelled": false,
+      "act_count": 0,
+      "verify_status": "live",
+      "authorization_epoch": "epoch-T04-B"
+    }
+  ],
+  "causal_events": [
+    {
+      "object_id": "ticket-441",
+      "status": "approved",
+      "seq": 1
+    },
+    {
+      "object_id": "ticket-441",
+      "status": "cancelled",
+      "seq": 2
+    }
+  ]
+}

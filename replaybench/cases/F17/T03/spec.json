@@ -1,0 +1,23 @@
+{
+  "family": "F17",
+  "template": "T03",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "sensitive",
+  "forbidden": "ds-holdout",
+  "expected": "ds-holdout",
+  "paired_object": "ds-holdout-v2",
+  "verify": "verify_retention",
+  "act": "set_retention",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "RetentionRecord",
+  "predicate": "duplicate_execution",
+  "task_query": "ds-holdout",
+  "a_result_sha256": "6994e46d992b365c9a7065971defe2ce9420ffdcea2a75cb70bb12326c4686dc"
+}

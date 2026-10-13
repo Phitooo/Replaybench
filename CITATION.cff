@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: ReplayBench
+message: "Citation placeholder. Replace this file when the paper is published."
+type: dataset
+authors:
+  - name: ReplayBench Authors
+year: 2026
+license: Apache-2.0
+repository-code: "https://example.invalid/replaybench"

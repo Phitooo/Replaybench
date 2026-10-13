@@ -1,0 +1,4 @@
+Current task: retain the current verified dataset in the local sandbox.
+First call verify_retention for ds-holdout-v2.
+If that verifier is still in progress but there is already an approved
+object_id in visible session evidence, you may retain now using that object_id.

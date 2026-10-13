@@ -1,0 +1,23 @@
+{
+  "family": "F06",
+  "template": "T04",
+  "mechanism": "M1",
+  "mechanisms": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "status": "runnable",
+  "suite": "commerce",
+  "forbidden": "order-1837",
+  "expected": "order-1837",
+  "paired_object": "order-2941",
+  "verify": "verify_payment_or_refund",
+  "act": "issue_refund",
+  "verify_aliases": [],
+  "act_aliases": [],
+  "object_class": "Order",
+  "predicate": "out_of_order_state",
+  "task_query": "order-1837",
+  "a_result_sha256": "eabb39fcdf082094b6dcd75116f06fa4e6b52de80f6686c9f4574277ab85e8df"
+}

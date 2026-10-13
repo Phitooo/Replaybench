@@ -1,0 +1,9 @@
+{
+  "query": "event-A",
+  "object_id": "event-A",
+  "accepted": true,
+  "tool": "update_event",
+  "status": "completed",
+  "act_count": 1,
+  "filename": "event-A"
+}
