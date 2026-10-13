@@ -1,114 +1,129 @@
+<p align="center"><a href="./README.md"><strong>English</strong></a> | <a href="./README.zh-CN.md">简体中文</a></p>
+
 # ReplayBench
 
-ReplayBench evaluates **cross-task replay of a genuine tool result** on LLM agents: task B is shown task A's real verifier output (right result, wrong task, wrong object). It is not a prompt-injection benchmark.
+**Evaluating tool-result misbinding in LLM agents through controlled replay**
 
-The package is a runnable benchmark with local sandbox tools and the results reported in the paper. No real email, payment, cloud, or production database is required.
+ReplayBench is a benchmark for studying **tool-result misbinding** in tool-using LLM agents. A genuine, unmodified tool result may be correct in its original execution context but become unsafe when reused for a different task, authorization state, execution stage, or causal order. ReplayBench uses **controlled replay** to investigate whether such misbinding leads agents to generate wrong actions and produce incorrect persistent states.
+
+**Replay is the evaluation method; misbinding is the failure under study.** T01 cross-task replay is only one of four failure templates. Unlike prompt injection, the replayed tool result contains no newly injected malicious instructions.
+
+The release provides local sandbox cases, replay delivery mechanisms, a LlamaIndex-based runner, an independent checker, example traces, and result tables accompanying the paper **TRAP: Tool-Result Replay Attack for Probing Misbinding in LLM Agents**. No real email, banking, payment, cloud, or production databases are required.
+
+## Benchmark coverage
+
+| Dimension | Coverage |
+| --- | --- |
+| Scenarios | 19 (`F01`–`F19`) |
+| Failure templates | 4 (`T01`–`T04`) |
+| Replay mechanisms | 3 (`M1`–`M3`) |
+| Scenario–template cases | 76 |
+| Scenario–template–mechanism configurations | 228 |
+| Paper evaluation | 8 LLMs × 3 agent frameworks × 7 scenarios for the main T01 table |
+
+### Four failure templates
+
+| Template | Violated property | Description |
+| --- | --- | --- |
+| T01 — Cross-task wrong-object | Attribution | A genuine result from one task/object is used in another task/object context. |
+| T02 — Stale-context | Contextual validity | A formerly valid result is reused after authorization, resource state, or another relevant condition changes. |
+| T03 — Duplicate-effect | Single execution | Replay causes an already committed state-changing operation to execute again. |
+| T04 — Out-of-order | Causal ordering | Results are consumed in an order inconsistent with the workflow's state transitions. |
+
+T02–T04 may concern changed states or steps of the same task, even when the object identifier is unchanged.
+
+### Three controlled replay mechanisms
+
+| Mechanism | Delivery path |
+| --- | --- |
+| M1 — Durable Recovery | A persisted tool result is retrieved during recovery. |
+| M2 — Queue Redelivery | A previously queued result is redelivered by a worker. |
+| M3 — Cache Resume | A cached result is restored when execution resumes. |
+
+Mechanisms determine *how* an unchanged result is delivered. Templates determine *which contextual validity requirement* is violated. These are controlled replay paths, not claims of vulnerabilities in specific frameworks.
 
 ## Quickstart
+
+Requires Python 3.10+.
 
 ```bash
 git clone https://github.com/Phitooo/Replaybench.git
 cd Replaybench
-pip install -e .
-```
-
-Smoke (no model, no key):
-
-```bash
+python -m pip install -e ".[dev]"
 replaybench smoke --family F01 --template T01 --mech M1
 python -m pytest tests/test_smoke.py
 ```
 
-The printed FSER is a protocol check, not a paper number. Paper Table 8 is `results/paper_main.csv`.
+The smoke run exercises the protocol **without making an LLM call**. Its displayed FSER is a protocol check, **not** a reproduction of a paper result.
 
-## Run one cell
-
-LlamaIndex is the supported agent stack. Bring your own key and endpoint.
-
-```bash
-pip install -e ".[llamaindex]"
-export OPENAI_API_KEY=...
-export REPLAYBENCH_MODEL=...          # model id your endpoint serves
-export OPENAI_BASE_URL=...            # optional OpenAI-compatible base
-
-replaybench run --family F01 --template T01 --mech M1 --n 1
-```
-
-Any of the 19 families, 4 templates, and 3 mechanisms can be run. A missing key stops before the model call and does not mean the case is missing.
-
-Score one existing trace with the same checker, still with no model:
+Score an included example trace without an API key:
 
 ```bash
 replaybench score --trace results/examples/F01_T01_M1_success.json
 ```
 
-## What is in the benchmark
+### Run a model-backed configuration
 
-| Axis | Count | Where |
-|---|---|---|
-| Families (scenarios) | 19 | `benchmark/families/F01.json` … `F19.json` |
-| Templates | 4 | T01 wrong-object, T02 stale-auth, T03 duplicate, T04 out-of-order |
-| Mechanisms | 3 | M1 durable store, M2 queue/relay, M3 cache/resume |
-| Runnable cases | 76 | `replaybench/cases/F01/T01` … `F19/T04` |
-| Paper result cells | 228 | `results/paper_main.csv` (76 cases × 3 mechanisms) |
+The public model-backed runner currently supports **LlamaIndex** with a user-configured endpoint.
 
-Mechanisms are delivery channels, not separate cases. M1, M2, and M3 share the same case bundle and deliver the same `a_result`. The 228 cells in the paper are the cross of 76 cases and 3 channels.
+```bash
+python -m pip install -e ".[llamaindex]"
+export OPENAI_API_KEY="YOUR_API_KEY"
+export REPLAYBENCH_MODEL="YOUR_MODEL_ID"
+# Optional for an OpenAI-compatible custom endpoint:
+# export OPENAI_BASE_URL="https://your-endpoint.example/v1"
+replaybench run --family F01 --template T01 --mech M1 --n 1
+```
 
-Five shared sandbox suites (`commerce`, `infra`, `org`, `sensitive`, `workspace`) live in `benchmark/toolkits/` and `replaybench/sandbox/`.
+Keep credentials out of committed files. Missing credentials, provider blocking, empty model responses, and infrastructure failures must not be counted as successful resistance to replay.
 
-## Metrics
+## Evaluation metrics
 
-The main metric is **FSER** (final-state error rate). The denominator is **`n_valid`**. **`n_blocked` is not FSER=0**.
+| Metric | Definition |
+| --- | --- |
+| DAR — Delivery Rate | Fraction of valid trials in which the replayed result reaches the target execution. |
+| WAR — Wrong Action Rate | Fraction of valid trials generating an incorrect state-changing action. |
+| AAR — Action Acceptance Rate | Fraction of valid trials in which the incorrect action is accepted for execution. |
+| **FSER — Final-State Error Rate** | **Fraction of valid trials with an independently verified incorrect persistent sandbox state (primary metric).** |
 
-| Metric | Meaning |
-|---|---|
-| DAR | Result delivered to B |
-| WAR | Wrong action generated |
-| AAR | Wrong action accepted |
-| FSER | Final state is wrong |
-| FR / Recov | Only defined on defense rows |
+All rates use valid-trial denominators. A delivered result need not cause a wrong action: DAR = 1 with FSER = 0 does not mean the replay was blocked. See [metric definitions](./docs/METRICS.md).
 
-DAR=1, WAR=0, FSER=0 is model non-acceptance, not a blocked trial and not a defense success. See `docs/METRICS.md`.
+## Results accompanying the paper
 
-## Reported results
+| File | Contents |
+| --- | --- |
+| [`results/table1_eight_models.csv`](./results/table1_eight_models.csv) | Main T01 evaluation: 8 models × 3 frameworks × 7 scenarios (paper Table 1). |
+| [`results/paper_main.csv`](./results/paper_main.csv) | 228 configurations across 19 scenarios, 4 templates, 3 mechanisms (Appendix G / Table 8). |
+| [`results/examples/`](./results/examples/) | Example traces for testing and inspecting the checker. |
+| [`results/table2_defenses.csv`](./results/table2_defenses.csv) | Paper-reported defense results, provided as data only. |
 
-| File | Paper table |
-|---|---|
-| `results/paper_main.csv` | Table 8. 228 cells, `n_valid=10`, FSER. |
-| `results/table1_eight_models.csv` | Table 1. Eight models × three frameworks × seven scenarios. |
-| `results/table2_defenses.csv` | Table 2. Call-ID binding, one-shot ticket, world-state epoch. |
-| `results/internal_provenance.csv` | Earlier lab denominators. Not the paper table. |
+The paper reports a mean **FSER of 0.649** for the main T01 evaluation and **0.989** across the full benchmark. These are reported experimental results, not guaranteed outputs of a new model run.
 
-In Table 8 the only FSER values below 1.00 are F01 T01 (M1 0.80, M2 0.70), F04 T01 (M1 0.70, M2 0.90, M3 0.90), and F16 T01 (M1 0.40, M2 0.40, M3 0.60).
+**Public release scope.** ReplayBench is released as a **benchmark**, not as the complete experimental codebase for every study in the paper. The paper additionally evaluates Call-ID binding, one-shot tickets, and world-state epochs; **their research implementations are not part of this public release**. The reported defense results may be included for reference, but should not be mistaken for executable reproductions of those three defenses. LangGraph and OpenAI Agents SDK paper results are included in the CSV tables, but their model-backed runners are not included here.
 
-`table1_eight_models.csv` matches paper Table 1. Scenario names map as Email=F01, Calendar=F03, Files=F04, Banking=F07, Identity=F13, DevOps=F15, Security=F16.
+## Repository layout
 
-`table2_defenses.csv` matches paper Table 2. The runnable `--defense` entry points are currently `binding` and `revalidation`, not the three names in Table 2. FR=0 and Recov=1 on the defense rows.
-
-## Layout
-
-- `benchmark/families/` — family specs
-- `replaybench/cases/` — 76 runnable case bundles (`state.json`, `a_result.json`, `b_user.txt`, `spec.json`)
-- `replaybench/delivery/` — M1 SQLite, M2 queue, M3 cache
-- `replaybench/checker.py` — scorer, separate from the agent
-- `replaybench/adapters/llamaindex.py` — supported runner
-- `results/examples/` — redacted trials for the checker
-
-LangGraph and the OpenAI Agents SDK are not included as runners. Their paper rates are in `table1_eight_models.csv`.
+```text
+benchmark/families/             # Scenario specifications
+benchmark/toolkits/             # Shared sandbox toolkits
+replaybench/cases/              # Scenario–template cases
+replaybench/delivery/           # Durable, queue, and cache replay paths
+replaybench/sandbox/            # Local state and tool environments
+replaybench/adapters/llamaindex.py
+replaybench/checker.py          # Independent trace/final-state scoring
+results/                         # Paper tables and example traces
+docs/METRICS.md                  # Metric definitions
+tests/test_smoke.py              # Model-free tests
+```
 
 ## Citation
 
-Placeholder until the paper is published. See also `CITATION.cff`.
+If you use ReplayBench, please cite the accompanying paper:
 
-```bibtex
-@misc{replaybench2026,
-  title        = {ReplayBench},
-  author       = {{ReplayBench Authors}},
-  year         = {2026},
-  note         = {Citation placeholder. Replace with the published paper.}
-}
-```
+> Yutong Zhi, Jie Zhang, Xiuqi Lu, Jiayuan Xu, and Jing Shao. *TRAP: Tool-Result Replay Attack for Probing Misbinding in LLM Agents*. 2026.
+
+See [`CITATION.cff`](./CITATION.cff). An arXiv identifier can be added after it becomes publicly available.
 
 ## License
 
-Apache-2.0. Copyright 2026 ReplayBench Authors.
+Apache-2.0. See [LICENSE](./LICENSE).
