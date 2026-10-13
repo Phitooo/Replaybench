@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "replaybench"
 version = "0.1.0"
-description = "Cross-task genuine tool-result replay benchmark (not prompt injection)"
+description = "A benchmark for evaluating tool-result misbinding in LLM agents through controlled replay"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "Apache-2.0"}
