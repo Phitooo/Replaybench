@@ -1,9 +1,32 @@
 cff-version: 1.2.0
-title: ReplayBench
-message: "Citation placeholder. Replace this file when the paper is published."
-type: dataset
+message: "If you use ReplayBench, please cite the accompanying TRAP paper."
+type: software
+title: "ReplayBench"
 authors:
-  - name: ReplayBench Authors
-year: 2026
-license: Apache-2.0
-repository-code: "https://example.invalid/replaybench"
+  - family-names: "Zhi"
+    given-names: "Yutong"
+  - family-names: "Zhang"
+    given-names: "Jie"
+  - family-names: "Lu"
+    given-names: "Xiuqi"
+  - family-names: "Xu"
+    given-names: "Jiayuan"
+  - family-names: "Shao"
+    given-names: "Jing"
+repository-code: "https://github.com/Phitooo/Replaybench"
+license: "Apache-2.0"
+preferred-citation:
+  type: article
+  title: "TRAP: Tool-Result Replay Attack for Probing Misbinding in LLM Agents"
+  authors:
+    - family-names: "Zhi"
+      given-names: "Yutong"
+    - family-names: "Zhang"
+      given-names: "Jie"
+    - family-names: "Lu"
+      given-names: "Xiuqi"
+    - family-names: "Xu"
+      given-names: "Jiayuan"
+    - family-names: "Shao"
+      given-names: "Jing"
+  year: 2026
