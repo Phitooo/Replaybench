@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="1330" viewBox="0 0 700 1330" role="img" aria-labelledby="t d"><title id="t">TRAP: tool-result misbinding</title><desc id="d">A genuine order result from task A is replayed unchanged into task B, causing the agent to cancel the wrong order.</desc>
+<rect x="0" y="0" width="700" height="1330" rx="0" fill="#fbfcfc"/>
+<rect x="34" y="34" width="5" height="58" rx="2" fill="#0a8190"/>
+<text x="57" y="56" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#0a8190" text-anchor="start" letter-spacing="1.6">TRAP / TOOL-RESULT MISBINDING</text>
+<text x="36" y="117" font-family="Arial,sans-serif" font-size="51" font-weight="700" fill="#193342" text-anchor="start">Real result.</text>
+<text x="36" y="172" font-family="Arial,sans-serif" font-size="51" font-weight="700" fill="#193342" text-anchor="start">Wrong context.</text>
+<text x="37" y="212" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#526b78" text-anchor="start">An unchanged order response crosses tasks.</text>
+<rect x="32" y="253" width="636" height="233" rx="12" fill="#edf7f7"/>
+<rect x="32" y="253" width="5" height="233" rx="2" fill="#0a8190"/>
+<text x="56" y="285" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#0a8190" text-anchor="start" letter-spacing="2">A / SOURCE TASK</text>
+<text x="56" y="331" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#193342" text-anchor="start">Look up order #1837</text>
+<rect x="55" y="354" width="260" height="53" rx="6" fill="#ffffff" stroke="#a9cfd2" stroke-width="1"/>
+<text x="73" y="389" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#193342" text-anchor="start">get_order(1837)</text>
+<line x1="328" y1="380" x2="367" y2="380" stroke="#0a8190" stroke-width="3"/>
+<path d="M357 374 L367 380 L357 386" fill="none" stroke="#0a8190" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="379" y="348" width="264" height="118" rx="7" fill="#ffffff" stroke="#0a8190" stroke-width="2"/>
+<text x="395" y="377" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#0a8190" text-anchor="start">REAL TOOL RESULT</text>
+<text x="395" y="413" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#193342" text-anchor="start">Order #1837</text>
+<text x="395" y="445" font-family="Arial,sans-serif" font-size="22" font-weight="400" fill="#526b78" text-anchor="start">Status: Shipped</text>
+<path d="M510 467 C510 497 510 501 510 531" fill="none" stroke="#c84f4b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="510" cy="512" r="18" fill="#c84f4b"/>
+<text x="510" y="520" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">!</text>
+<rect x="85" y="527" width="530" height="101" rx="10" fill="#fce9e5" stroke="#c84f4b" stroke-width="2"/>
+<text x="350" y="565" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#c84f4b" text-anchor="middle">BINDING FAILURE</text>
+<text x="350" y="602" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#193342" text-anchor="middle">Origin task A  ≠  active task B</text>
+<rect x="32" y="661" width="636" height="254" rx="12" fill="#fff3f0"/>
+<rect x="32" y="661" width="5" height="254" rx="2" fill="#c84f4b"/>
+<text x="56" y="694" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#c84f4b" text-anchor="start" letter-spacing="2">B / TARGET TASK</text>
+<text x="56" y="739" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#193342" text-anchor="start">Cancel order #2941</text>
+<text x="56" y="778" font-family="Arial,sans-serif" font-size="22" font-weight="400" fill="#526b78" text-anchor="start">Expected evidence: order #2941</text>
+<rect x="55" y="808" width="287" height="78" rx="6" fill="#ffffff" stroke="#e4b7af" stroke-width="1.5"/>
+<text x="72" y="838" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#c84f4b" text-anchor="start">CONSUMED RESULT</text>
+<text x="72" y="870" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#193342" text-anchor="start">Order #1837 · unchanged</text>
+<line x1="352" y1="846" x2="390" y2="846" stroke="#c84f4b" stroke-width="3"/>
+<path d="M380 840 L390 846 L380 852" fill="none" stroke="#c84f4b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="403" y="807" width="238" height="80" rx="6" fill="#c84f4b"/>
+<text x="423" y="836" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="start">AGENT ACTION</text>
+<text x="423" y="870" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="start">cancel_order(1837)</text>
+<text x="37" y="960" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#193342" text-anchor="start" letter-spacing="2">FINAL SANDBOX STATE</text>
+<rect x="32" y="982" width="310" height="181" rx="8" fill="#e7f4ed"/>
+<rect x="358" y="982" width="310" height="181" rx="8" fill="#fce9e5"/>
+<text x="53" y="1020" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#2d8b67" text-anchor="start">EXPECTED</text>
+<text x="53" y="1063" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#193342" text-anchor="start">#1837 active</text>
+<text x="53" y="1104" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#193342" text-anchor="start">#2941 cancelled</text>
+<text x="379" y="1020" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#c84f4b" text-anchor="start">OBSERVED</text>
+<text x="379" y="1063" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#c84f4b" text-anchor="start">#1837 cancelled</text>
+<text x="379" y="1104" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#193342" text-anchor="start">#2941 active</text>
+<line x1="34" y1="1195" x2="666" y2="1195" stroke="#d7e2e5" stroke-width="2"/>
+<text x="37" y="1229" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#0a8190" text-anchor="start" letter-spacing="2">REPLAYBENCH</text>
+<text x="37" y="1266" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#193342" text-anchor="start">Tracks delivery → wrong action → final-state error</text>
+<text x="37" y="1300" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#526b78" text-anchor="start">Illustrative order case; no injected instructions.</text>
+</svg>
