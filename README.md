@@ -8,7 +8,12 @@ ReplayBench is a benchmark for studying **tool-result misbinding** in tool-using
 
 **Replay is the evaluation method; misbinding is the failure under study.** T01 cross-task replay is only one of four failure templates. Unlike prompt injection, the replayed tool result contains no newly injected malicious instructions.
 
-The release provides local sandbox cases, replay delivery mechanisms, a LlamaIndex-based runner, an independent checker, example traces, and result tables accompanying the paper **TRAP: Tool-Result Replay Attack for Probing Misbinding in LLM Agents**. No real email, banking, payment, cloud, or production databases are required.
+The release provides local sandbox cases, replay delivery mechanisms, a LlamaIndex-based runner, an independent checker, example traces, and result tables accompanying the paper:
+
+**TRAP: Tool-Result Replay Attack for Probing Misbinding in LLM Agents**  
+📄 Paper: https://arxiv.org/abs/2610.16333
+
+No real email, banking, payment, cloud, or production databases are required.
 
 ## Benchmark coverage
 
@@ -118,12 +123,20 @@ tests/test_smoke.py              # Model-free tests
 
 ## Citation
 
-If you use ReplayBench, please cite the accompanying paper:
+If you use ReplayBench in your research, please cite our paper:
 
-> Yutong Zhi, Jie Zhang, Xiuqi Lu, Jiayuan Xu, and Jing Shao. *TRAP: Tool-Result Replay Attack for Probing Misbinding in LLM Agents*. 2026.
+```bibtex
+@misc{zhi2026traptoolresultreplayattack,
+      title={{TRAP: Tool-Result Replay Attack for Probing Misbinding in LLM Agents}},
+      author={Yutong Zhi and Jie Zhang and Xiuqi Lu and Jiayuan Xu and Jing Shao},
+      year={2026},
+      eprint={2610.16333},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2610.16333},
+}
 
-See [`CITATION.cff`](./CITATION.cff). An arXiv identifier can be added after it becomes publicly available.
-
+```
 ## License
 
 Apache-2.0. See [LICENSE](./LICENSE).
