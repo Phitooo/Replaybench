@@ -2,13 +2,18 @@
 
 # ReplayBench
 
-**通过受控工具结果重放评估 LLM Agent 中的工具结果上下文错绑**
+**通过受控回放评估 LLM 智能体中的工具结果错绑定问题**
 
-ReplayBench 是一个用于评估 **工具结果错绑（tool-result misbinding）** 的基准测试。真实且未经修改的工具结果在原始执行上下文中可能完全正确，但在其他任务、授权状态、执行阶段或因果顺序下被再次使用时，可能诱导 Agent 生成错误动作，进而产生错误的持久化状态。
+ReplayBench 是一个用于研究工具调用型 LLM 智能体中 **工具结果错绑定（tool-result misbinding）** 的评测基准。一个真实且未经修改的工具结果，在其原始执行上下文中可能是正确的；但当该结果被复用于不同任务、权限状态、执行阶段或因果顺序的上下文中时，可能导致智能体产生不安全行为。ReplayBench 通过**受控回放（controlled replay）** 系统研究此类错绑定是否会导致智能体生成错误动作，并进一步产生错误的持久化状态。
 
-**重放（replay）是评估手段，错绑（misbinding）才是研究对象。** T01 跨任务重放仅是四种失败模板之一。与提示注入不同，重放的工具结果不需要加入新的恶意指令。
+**回放（Replay）是评测方法，而错绑定（Misbinding）是研究对象。** T01 跨任务回放仅是四类失败模板之一。与提示词注入（prompt injection）不同，ReplayBench 中被回放的工具结果本身不包含任何新增的恶意指令。
 
-本仓库公开本地沙箱案例、重放交付机制、基于 LlamaIndex 的运行器、独立检查器、示例轨迹，以及论文 **TRAP: Tool-Result Replay Attack for Probing Misbinding in LLM Agents** 对应的结果数据。运行不需要真实的邮箱、支付、银行、云服务或生产数据库。
+本项目发布了论文 **TRAP: Tool-Result Replay Attack for Probing Misbinding in LLM Agents** 对应的实验资源，包括本地沙箱案例、回放传递机制、基于 LlamaIndex 的运行器、独立检查器、示例执行轨迹以及实验结果表格。
+
+📄 论文链接：
+https://arxiv.org/abs/2610.16333
+
+本项目无需连接真实的邮箱、银行、支付、云服务或生产数据库环境即可运行。
 
 ## 基准覆盖范围
 
@@ -118,12 +123,19 @@ tests/test_smoke.py              # 无模型测试
 
 ## 引用
 
-使用 ReplayBench 时，请引用相应论文：
+如果 ReplayBench 对您的研究有所帮助，请引用我们的论文：
 
-> Yutong Zhi, Jie Zhang, Xiuqi Lu, Jiayuan Xu, and Jing Shao. *TRAP: Tool-Result Replay Attack for Probing Misbinding in LLM Agents*. 2026.
-
-引用元数据见 [`CITATION.cff`](./CITATION.cff)。公开 arXiv 编号确认后可进一步补充。
-
+```bibtex
+@misc{zhi2026traptoolresultreplayattack,
+      title={{TRAP: Tool-Result Replay Attack for Probing Misbinding in LLM Agents}},
+      author={Yutong Zhi and Jie Zhang and Xiuqi Lu and Jiayuan Xu and Jing Shao},
+      year={2026},
+      eprint={2610.16333},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2610.16333},
+}
+```
 ## 许可证
 
 Apache-2.0，详见 [LICENSE](./LICENSE)。
