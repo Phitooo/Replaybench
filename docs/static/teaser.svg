@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="t d"><title id="t">TRAP: tool-result misbinding</title><desc id="d">A genuine order result from task A is replayed unchanged into task B, causing the agent to cancel the wrong order.</desc>
+<rect x="0" y="0" width="1600" height="900" rx="0" fill="#fbfcfc"/>
+<rect x="58" y="45" width="6" height="68" rx="3" fill="#0a8190"/>
+<text x="83" y="67" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#0a8190" text-anchor="start" letter-spacing="2">TRAP / EXECUTION TRACE</text>
+<text x="83" y="115" font-family="Arial,sans-serif" font-size="49" font-weight="700" fill="#193342" text-anchor="start">The result is real. The context is wrong.</text>
+<text x="84" y="157" font-family="Arial,sans-serif" font-size="22" font-weight="400" fill="#526b78" text-anchor="start">Two independent order tasks; one unchanged tool response crosses the task boundary.</text>
+<rect x="70" y="210" width="1195" height="204" rx="14" fill="#edf7f7"/>
+<rect x="70" y="448" width="1195" height="223" rx="14" fill="#fff4f1"/>
+<rect x="70" y="210" width="6" height="204" rx="3" fill="#0a8190"/>
+<rect x="70" y="448" width="6" height="223" rx="3" fill="#c84f4b"/>
+<text x="97" y="243" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#0a8190" text-anchor="start" letter-spacing="2">A  /  SOURCE EXECUTION</text>
+<text x="97" y="484" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#c84f4b" text-anchor="start" letter-spacing="2">B  /  TARGET EXECUTION</text>
+<text x="99" y="287" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#526b78" text-anchor="start">LOOK UP</text>
+<text x="99" y="328" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#193342" text-anchor="start">Order #1837</text>
+<text x="99" y="362" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#526b78" text-anchor="start">Independent user task</text>
+<line x1="345" y1="330" x2="402" y2="330" stroke="#0a8190" stroke-width="2.5"/>
+<path d="M392 324 L402 330 L392 336" fill="none" stroke="#0a8190" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="410" y="278" width="242" height="106" rx="8" fill="#ffffff" stroke="#abcbd0" stroke-width="1.5"/>
+<text x="429" y="305" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#0a8190" text-anchor="start" letter-spacing="2">TOOL INVOCATION</text>
+<text x="429" y="344" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#193342" text-anchor="start">get_order(1837)</text>
+<text x="429" y="370" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#526b78" text-anchor="start">Order database</text>
+<line x1="654" y1="330" x2="706" y2="330" stroke="#0a8190" stroke-width="2.5"/>
+<path d="M696 324 L706 330 L696 336" fill="none" stroke="#0a8190" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="714" y="251" width="322" height="176" rx="9" fill="#ffffff" stroke="#79bfc5" stroke-width="2"/>
+<rect x="714" y="251" width="322" height="43" rx="8" fill="#0a8190"/>
+<text x="734" y="280" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="start">AUTHENTIC TOOL RESULT</text>
+<text x="734" y="329" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#526b78" text-anchor="start">order_id</text>
+<text x="1008" y="329" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#193342" text-anchor="end">1837</text>
+<line x1="734" y1="344" x2="1014" y2="344" stroke="#d7e2e5" stroke-width="1"/>
+<text x="734" y="378" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#526b78" text-anchor="start">status</text>
+<text x="1008" y="378" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#193342" text-anchor="end">Shipped</text>
+<rect x="1058" y="315" width="166" height="32" rx="16" fill="#ffffff"/>
+<text x="1141.0" y="337" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#0a8190" text-anchor="middle">UNCHANGED</text>
+<text x="1058" y="368" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#0a8190" text-anchor="start">Correct for Task A</text>
+<path d="M875 427 C875 457 878 464 878 505" fill="none" stroke="#c84f4b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="878" cy="471" r="19" fill="#c84f4b"/>
+<text x="878" y="479" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">!</text>
+<text x="934" y="477" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#c84f4b" text-anchor="start">REPLAY / MISBINDING</text>
+<text x="934" y="501" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#c84f4b" text-anchor="start">Origin A  ≠  active task B</text>
+<text x="99" y="532" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#526b78" text-anchor="start">CANCEL</text>
+<text x="99" y="573" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#193342" text-anchor="start">Order #2941</text>
+<text x="99" y="606" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#526b78" text-anchor="start">Current user request</text>
+<line x1="345" y1="573" x2="402" y2="573" stroke="#c84f4b" stroke-width="2.5"/>
+<path d="M392 567 L402 573 L392 579" fill="none" stroke="#c84f4b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="410" y="521" width="242" height="106" rx="8" fill="#ffffff" stroke="#ecc3bb" stroke-width="1.5"/>
+<text x="429" y="548" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#c84f4b" text-anchor="start" letter-spacing="2">EXPECTED EVIDENCE</text>
+<text x="429" y="587" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#193342" text-anchor="start">get_order(2941)</text>
+<text x="429" y="613" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#526b78" text-anchor="start">Pending in Task B</text>
+<line x1="654" y1="573" x2="703" y2="573" stroke="#c84f4b" stroke-width="2.5"/>
+<path d="M693 567 L703 573 L693 579" fill="none" stroke="#c84f4b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="714" y="528" width="323" height="108" rx="9" fill="#ffffff" stroke="#c84f4b" stroke-width="2"/>
+<rect x="714" y="528" width="7" height="108" rx="3" fill="#c84f4b"/>
+<text x="737" y="559" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#c84f4b" text-anchor="start">CONSUMED IN TASK B</text>
+<text x="737" y="598" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#193342" text-anchor="start">Order #1837 · Shipped</text>
+<text x="737" y="623" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#526b78" text-anchor="start">Same bytes; incompatible task</text>
+<line x1="1042" y1="573" x2="1087" y2="573" stroke="#c84f4b" stroke-width="3"/>
+<path d="M1077 567 L1087 573 L1077 579" fill="none" stroke="#c84f4b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1095" y="526" width="143" height="111" rx="8" fill="#c84f4b"/>
+<text x="1111" y="558" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="start">AGENT ACTION</text>
+<text x="1111" y="592" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="start">cancel_order</text>
+<text x="1111" y="618" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="start">(1837)</text>
+<line x1="1242" y1="573" x2="1282" y2="573" stroke="#c84f4b" stroke-width="3"/>
+<path d="M1272 567 L1282 573 L1272 579" fill="none" stroke="#c84f4b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1290" y="210" width="241" height="461" rx="12" fill="#ffffff" stroke="#d7e2e5" stroke-width="1.5"/>
+<text x="1313" y="244" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#193342" text-anchor="start" letter-spacing="2">ORDER STATE</text>
+<text x="1313" y="283" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#2d8b67" text-anchor="start">EXPECTED</text>
+<rect x="1311" y="299" width="198" height="121" rx="7" fill="#e7f4ed"/>
+<text x="1326" y="327" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#193342" text-anchor="start">#1837   active</text>
+<text x="1326" y="362" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#193342" text-anchor="start">#2941   cancelled</text>
+<text x="1313" y="459" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#c84f4b" text-anchor="start">OBSERVED</text>
+<rect x="1311" y="475" width="198" height="148" rx="7" fill="#fce9e5"/>
+<text x="1326" y="507" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#c84f4b" text-anchor="start">#1837   cancelled</text>
+<text x="1326" y="542" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#193342" text-anchor="start">#2941   active</text>
+<line x1="1326" y1="566" x2="1491" y2="566" stroke="#e2b6af" stroke-width="1"/>
+<text x="1326" y="595" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#c84f4b" text-anchor="start">Final-state error</text>
+<line x1="72" y1="715" x2="1531" y2="715" stroke="#d7e2e5" stroke-width="2"/>
+<text x="75" y="754" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#0a8190" text-anchor="start" letter-spacing="2">REPLAYBENCH</text>
+<text x="75" y="790" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#193342" text-anchor="start">Controlled replay, independently checked state</text>
+<text x="75" y="818" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#526b78" text-anchor="start">19 scenarios · four failure templates · three replay mechanisms</text>
+<circle cx="822" cy="781" r="19" fill="#dff2f2"/>
+<text x="822" y="787" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#0a8190" text-anchor="middle">01</text>
+<text x="851" y="787" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#193342" text-anchor="start">Delivery</text>
+<circle cx="995" cy="781" r="19" fill="#fce9e5"/>
+<text x="995" y="787" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#c84f4b" text-anchor="middle">02</text>
+<text x="1024" y="787" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#193342" text-anchor="start">Wrong action</text>
+<circle cx="1168" cy="781" r="19" fill="#fce9e5"/>
+<text x="1168" y="787" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#c84f4b" text-anchor="middle">03</text>
+<text x="1197" y="787" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#193342" text-anchor="start">Acceptance</text>
+<circle cx="1341" cy="781" r="19" fill="#fce9e5"/>
+<text x="1341" y="787" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#c84f4b" text-anchor="middle">04</text>
+<text x="1370" y="787" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#193342" text-anchor="start">Final state</text>
+<text x="75" y="867" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#526b78" text-anchor="start">Illustrative order case from Figure 1. ReplayBench tests tool-result association, not injected instructions.</text>
+</svg>
